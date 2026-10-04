@@ -34,6 +34,14 @@ QA_BADGES = {
 }
 
 
+def clean_html(val: str) -> str:
+    """Strips leading/trailing indentation from each line so CommonMark renders raw HTML instead of code blocks."""
+    if not val:
+        return ""
+    lines = [line.strip() for line in val.splitlines() if line.strip()]
+    return "\n".join(lines)
+
+
 # ---------------------------------------------------------------------------
 # Health Score & Classification Calculation
 # ---------------------------------------------------------------------------
@@ -135,7 +143,7 @@ def render_summary_html(result: AnalysisResult) -> str:
     """Produces a comprehensive, bespoke HTML view for the Summary tab."""
     if result.refused:
         reason = html.escape(result.refusal_reason or "This image does not appear to be a packaged food label.")
-        return f"""
+        return clean_html(f"""
         <div style="background:#FEF2F2;border:2px solid #FCA5A5;border-radius:16px;padding:24px;margin:20px 0;color:#991B1B;">
             <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
                 <span style="font-size:32px;">🚫</span>
@@ -148,7 +156,7 @@ def render_summary_html(result: AnalysisResult) -> str:
                 {reason}
             </div>
         </div>
-        """
+        """)
 
     extract = result.extract
     summary = result.summary
@@ -444,7 +452,7 @@ def render_summary_html(result: AnalysisResult) -> str:
     </div>
     """
 
-    return f"""
+    return clean_html(f"""
     <div style="font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;color:#0F172A;padding:4px;">
         {warnings_html}
 
@@ -492,15 +500,15 @@ def render_summary_html(result: AnalysisResult) -> str:
         {note_html}
         {footer_html}
     </div>
-    """
+    """)
 
 
 def render_ingredients_html(result: AnalysisResult) -> str:
     """Produces a clean, visual card view for all ingredients and additives."""
     if not result.ratings:
         if result.refused:
-            return "<div style='padding:24px;text-align:center;color:#64748B;'>Analysis refused. No ingredients analyzed.</div>"
-        return "<div style='padding:24px;text-align:center;color:#64748B;'>No ingredients found on photographed panels. Check pack.</div>"
+            return clean_html("<div style='padding:24px;text-align:center;color:#64748B;'>Analysis refused. No ingredients analyzed.</div>")
+        return clean_html("<div style='padding:24px;text-align:center;color:#64748B;'>No ingredients found on photographed panels. Check pack.</div>")
 
     good_count = sum(1 for r in result.ratings if r.level == "good")
     neutral_count = sum(1 for r in result.ratings if r.level == "neutral")
@@ -586,7 +594,7 @@ def render_ingredients_html(result: AnalysisResult) -> str:
     </div>
     """
 
-    return f"""
+    return clean_html(f"""
     <div style="font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;padding:4px;">
         {summary_strip}
         {cards_grid}
@@ -594,13 +602,13 @@ def render_ingredients_html(result: AnalysisResult) -> str:
             * Ratings grounded in curated food science benchmarks and label ingredient order.
         </div>
     </div>
-    """
+    """)
 
 
 def render_nutrition_html(result: AnalysisResult) -> str:
     """Produces the Nutrition facts tab with traffic lights and full nutrient breakdown."""
     if not result.extract or not result.extract.nutrition:
-        return "<div style='padding:24px;text-align:center;color:#64748B;'>No nutrition information extracted from label. Check pack.</div>"
+        return clean_html("<div style='padding:24px;text-align:center;color:#64748B;'>No nutrition information extracted from label. Check pack.</div>")
 
     nut = result.extract.nutrition
     basis = nut.basis.replace("_", " ").title() if nut.basis else "Per 100g"
@@ -702,18 +710,18 @@ def render_nutrition_html(result: AnalysisResult) -> str:
     </div>
     """
 
-    return f"""
+    return clean_html(f"""
     <div style="font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;padding:4px;">
         {traffic_strip}
         {table_html}
     </div>
-    """
+    """)
 
 
 def render_qa_html(result: AnalysisResult) -> str:
     """Produces the evidence-backed Q&A response card."""
     if not result.qa:
-        return "<div style='padding:24px;text-align:center;color:#64748B;'>No question was asked during analysis. Enter a question above to get a sourced answer.</div>"
+        return clean_html("<div style='padding:24px;text-align:center;color:#64748B;'>No question was asked during analysis. Enter a question above to get a sourced answer.</div>")
 
     qa = result.qa
     badge = QA_BADGES.get(qa.source, "❓ General Knowledge")
@@ -738,7 +746,7 @@ def render_qa_html(result: AnalysisResult) -> str:
         </div>
         """
 
-    return f"""
+    return clean_html(f"""
     <div style="font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;padding:4px;">
         <div style="background:#FFFFFF;border:1.5px solid #E2E8F0;border-radius:16px;padding:24px;box-shadow:0 4px 16px -2px rgba(15,23,42,0.05);">
             <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid #E2E8F0;">
@@ -760,7 +768,7 @@ def render_qa_html(result: AnalysisResult) -> str:
             {evidence_html}
         </div>
     </div>
-    """
+    """)
 
 
 def render_transcription_html(result: AnalysisResult) -> str:
@@ -768,7 +776,7 @@ def render_transcription_html(result: AnalysisResult) -> str:
     raw_text = (result.extract.raw_transcription if result.extract else "") or "No text could be extracted."
     word_count = len(raw_text.split())
 
-    return f"""
+    return clean_html(f"""
     <div style="font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;padding:4px;">
         <div style="background:#FFFFFF;border:1.5px solid #E2E8F0;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
             <div style="background:#F8FAFC;padding:12px 18px;border-bottom:1px solid #E2E8F0;display:flex;align-items:center;justify-content:space-between;">
@@ -778,7 +786,7 @@ def render_transcription_html(result: AnalysisResult) -> str:
             <pre style="margin:0;padding:20px;font-family:'DM Mono', monospace;font-size:13px;color:#1E293B;line-height:1.6;white-space:pre-wrap;background:#FFFFFF;overflow-x:auto;">{html.escape(raw_text)}</pre>
         </div>
     </div>
-    """
+    """)
 
 
 # ---------------------------------------------------------------------------

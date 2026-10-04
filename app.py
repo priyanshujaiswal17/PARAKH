@@ -19,9 +19,19 @@ import gradio as gr
 # Using gr.Markdown(sanitize_html=False) renders identical full HTML safely.
 _orig_html = gr.HTML
 
+def _clean_str(val: Any) -> Any:
+    if isinstance(val, str):
+        lines = [line.strip() for line in val.splitlines() if line.strip()]
+        return "\n".join(lines)
+    return val
+
 def _safe_html_component(*args, **kwargs):
     kwargs.pop("show_label", None)
     kwargs["sanitize_html"] = False
+    if "value" in kwargs:
+        kwargs["value"] = _clean_str(kwargs["value"])
+    elif args and isinstance(args[0], str):
+        args = (_clean_str(args[0]),) + args[1:]
     return gr.Markdown(*args, **kwargs)
 
 gr.HTML = _safe_html_component
@@ -40,6 +50,7 @@ from llm import health
 from pipeline.models import AnalysisResult
 from pipeline.render import (
     DISCLAIMER_H10,
+    clean_html,
     render_ingredients_html,
     render_nutrition_html,
     render_qa_html,
@@ -695,7 +706,7 @@ def _empty_card(icon: str, title: str, subtitle: str, tips: list[str]) -> str:
         f"<span style='background:#F1F5F9;border:1px solid #E2E8F0;border-radius:999px;padding:5px 14px;font-size:12.5px;color:#475569;font-weight:600;'>{t}</span>"
         for t in tips
     )
-    return f"""
+    return clean_html(f"""
     <div style="text-align:center;padding:50px 24px;font-family:'Plus Jakarta Sans',sans-serif;color:#0F172A;">
         <div style="width:64px;height:64px;background:#ECFDF5;border:1px solid #A7F3D0;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:30px;margin-bottom:14px;box-shadow:0 2px 8px rgba(16,185,129,0.15);">
             {icon}
@@ -708,7 +719,7 @@ def _empty_card(icon: str, title: str, subtitle: str, tips: list[str]) -> str:
             {tips_html}
         </div>
     </div>
-    """
+    """)
 
 EMPTY_SUMMARY_HTML = _empty_card(
     "📋", "Awaiting Food Label",
@@ -734,11 +745,11 @@ EMPTY_QA_HTML = _empty_card(
     ["Diabetic Friendly?", "Pregnancy Safe?", "Good for Kids?", "Contains Palm Oil?"],
 )
 
-EMPTY_TRANSCRIPTION_HTML = """
+EMPTY_TRANSCRIPTION_HTML = clean_html("""
 <div style="padding:40px 24px;text-align:center;font-family:'Plus Jakarta Sans',sans-serif;color:#64748B;font-size:14px;">
     Raw extracted text from your label photos will appear here for complete transparency and cross-checking.
 </div>
-"""
+""")
 
 
 # ---------------------------------------------------------------------------
@@ -747,7 +758,7 @@ EMPTY_TRANSCRIPTION_HTML = """
 
 def _loading_status(step: int, total: int, msg: str, elapsed: float) -> str:
     pct = min(100, int((step / max(total, 1)) * 100))
-    return (
+    return clean_html(
         f'<div class="status-loading">'
         f'<span class="spinner"></span>'
         f'<span><strong>Step {step}/{total}:</strong> {msg}'
@@ -772,7 +783,7 @@ def run_connection_check(api_key: str) -> str:
     for c in checks:
         ci = "✅" if c.get("ok") else "❌"
         lines.append(f"<div style='font-size:13px;color:#334155;margin:4px 0;'>{ci} <strong>{c.get('name', 'Check')}</strong>: {c.get('detail', '')}</div>")
-    return "".join(lines)
+    return clean_html("".join(lines))
 
 
 def run_pipeline(
@@ -855,7 +866,15 @@ def run_pipeline(
                 f'<span style="opacity:0.75;font-weight:600"> · Gemma 4 via Google AI Studio</span></div>'
             )
 
-        yield (status, summary_html, ingredients_html, nutrition_html, qa_html, transcription_html, report_path)
+        yield (
+            clean_html(status),
+            clean_html(summary_html),
+            clean_html(ingredients_html),
+            clean_html(nutrition_html),
+            clean_html(qa_html),
+            clean_html(transcription_html),
+            report_path,
+        )
 
 
 # ---------------------------------------------------------------------------
@@ -894,14 +913,14 @@ def make_img_badge(img: Any, label: str = "Photo") -> str:
             dim = f"{w}×{h}px"
         except Exception:
             dim = "Loaded"
-        return f'<span class="img-badge-success">✅ {label} Uploaded ({dim}) &nbsp;·&nbsp; Ready for AI Scan</span>'
-    return '<span class="img-badge-pending">⏳ No image uploaded yet</span>'
+        return clean_html(f'<span class="img-badge-success">✅ {label} Uploaded ({dim}) &nbsp;·&nbsp; Ready for AI Scan</span>')
+    return clean_html('<span class="img-badge-pending">⏳ No image uploaded yet</span>')
 
 
 def make_upload_summary(img1: Any, img2: Any, img3: Any) -> str:
     count = sum(1 for img in (img1, img2, img3) if img is not None)
     if count == 0:
-        return (
+        return clean_html(
             '<div class="upload-summary-bar">'
             '<div>📸 <strong>0 / 3 Photos Uploaded</strong> &nbsp;·&nbsp; '
             '<span style="color:#64748B;">Upload packaging photo to begin AI verification.</span></div>'
@@ -909,7 +928,7 @@ def make_upload_summary(img1: Any, img2: Any, img3: Any) -> str:
             '</div>'
         )
     elif count == 1:
-        return (
+        return clean_html(
             '<div class="upload-summary-bar has-photos">'
             '<div>📸 <strong>✅ 1 Photo Uploaded</strong> &nbsp;·&nbsp; '
             '<span style="color:#047857;font-weight:600;">Primary packaging panel ready for AI audit!</span></div>'
@@ -917,7 +936,7 @@ def make_upload_summary(img1: Any, img2: Any, img3: Any) -> str:
             '</div>'
         )
     else:
-        return (
+        return clean_html(
             f'<div class="upload-summary-bar has-photos">'
             f'<div>📸 <strong>✅ {count} Photos Uploaded</strong> &nbsp;·&nbsp; '
             f'<span style="color:#047857;font-weight:600;">Multi-angle packaging panels loaded for full 360° audit!</span></div>'

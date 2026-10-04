@@ -1,0 +1,17 @@
+{
+  "is_medicine": false,
+  "product_name": "NutriCrunch Digestive Biscuits",
+  "ingredients": [
+    "Whole wheat flour",
+    "Palm oil",
+    "Sugar",
+    "Invert syrup",
+    "Edible salt",
+    "Raising agent (INS 500(ii))",
+    "Emulsifier (INS 322)"
+  ],
+  "allergen_statement": [
+    "Contains Wheat and Soy"
+  ],
+  "expiry_date": "2026-07-31"
+}

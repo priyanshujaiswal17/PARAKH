@@ -1,0 +1,15 @@
+{
+  "source": "UK Food Standards Agency (FSA) traffic light guidance cutoffs. Used as a general consumer reference, not an Indian regulatory standard.",
+  "per_100g": {
+    "total_fat": { "low": 3.0, "high": 17.5, "unit": "g" },
+    "saturated_fat": { "low": 1.5, "high": 5.0, "unit": "g" },
+    "total_sugar": { "low": 5.0, "high": 22.5, "unit": "g" },
+    "salt": { "low": 0.3, "high": 1.5, "unit": "g" }
+  },
+  "per_100ml": {
+    "total_fat": { "low": 1.5, "high": 8.75, "unit": "g" },
+    "saturated_fat": { "low": 0.75, "high": 2.5, "unit": "g" },
+    "total_sugar": { "low": 2.5, "high": 11.25, "unit": "g" },
+    "salt": { "low": 0.3, "high": 0.75, "unit": "g" }
+  }
+}

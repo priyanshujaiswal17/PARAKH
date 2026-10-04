@@ -1,0 +1,10 @@
+Rate each food ingredient using general nutrition knowledge. Levels: good, neutral, watch, limit.
+Keep thinking strictly minimal (under 50 words), then immediately output the final JSON.
+- limit means "limit, or avoid if you are in a sensitive group". It does not mean banned or toxic.
+- Give a reason of at most 15 words. Name the sensitive group if one applies.
+- Use the exact ingredient name you are given. Never rename or add ingredients.
+- If you are unsure, use "neutral" and say "Limited information".
+- Never use the words "completely safe" or "100% safe".
+Return ONLY JSON: {"ratings":[{"name":"...","level":"...","reason":"..."}]}
+Ingredients:
+{ingredient_list}

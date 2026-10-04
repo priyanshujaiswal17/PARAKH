@@ -1,0 +1,783 @@
+[
+  {
+    "id": "ins100i",
+    "ins": "100i",
+    "names": ["curcumin", "turmeric extract", "natural yellow 3"],
+    "category": "colour",
+    "level": "good",
+    "reason": "Natural antioxidant colour derived from turmeric rhizomes."
+  },
+  {
+    "id": "ins101",
+    "ins": "101",
+    "names": ["riboflavin", "vitamin b2"],
+    "category": "colour",
+    "level": "good",
+    "reason": "Essential vitamin B2 used safely as a yellow colour."
+  },
+  {
+    "id": "ins102",
+    "ins": "102",
+    "names": ["tartrazine", "yellow 5", "fd&c yellow no. 5"],
+    "category": "colour",
+    "level": "limit",
+    "reason": "Synthetic colour; may trigger reactions in sensitive people and some children."
+  },
+  {
+    "id": "ins110",
+    "ins": "110",
+    "names": ["sunset yellow fcf", "orange yellow s", "yellow 6"],
+    "category": "colour",
+    "level": "limit",
+    "reason": "Synthetic azo dye; sensitive people and children should limit intake."
+  },
+  {
+    "id": "ins122",
+    "ins": "122",
+    "names": ["carmoisine", "azorubine", "red 3"],
+    "category": "colour",
+    "level": "limit",
+    "reason": "Synthetic red azo dye; may cause intolerance in sensitive individuals."
+  },
+  {
+    "id": "ins124",
+    "ins": "124",
+    "names": ["ponceau 4r", "cochineal red a"],
+    "category": "colour",
+    "level": "limit",
+    "reason": "Synthetic red dye; sensitive people and asthmatics should limit intake."
+  },
+  {
+    "id": "ins129",
+    "ins": "129",
+    "names": ["allura red ac", "red 40"],
+    "category": "colour",
+    "level": "limit",
+    "reason": "Synthetic azo colour; may affect attention in sensitive children."
+  },
+  {
+    "id": "ins133",
+    "ins": "133",
+    "names": ["brilliant blue fcf", "blue 1"],
+    "category": "colour",
+    "level": "watch",
+    "reason": "Synthetic blue dye; permitted additive with occasional reported sensitivity."
+  },
+  {
+    "id": "ins150a",
+    "ins": "150a",
+    "names": ["plain caramel", "caramel i", "caramel colour"],
+    "category": "colour",
+    "level": "neutral",
+    "reason": "Standard heated sugar caramel colour without ammonium or sulphite."
+  },
+  {
+    "id": "ins150c",
+    "ins": "150c",
+    "names": ["ammonia caramel", "caramel iii"],
+    "category": "colour",
+    "level": "watch",
+    "reason": "Ammonia-processed caramel; consumed safely within regulated limits."
+  },
+  {
+    "id": "ins150d",
+    "ins": "150d",
+    "names": ["sulphite ammonia caramel", "caramel iv"],
+    "category": "colour",
+    "level": "watch",
+    "reason": "Sulphite ammonia caramel; contains trace sulphites that sensitive people should note."
+  },
+  {
+    "id": "ins160ai",
+    "ins": "160ai",
+    "names": ["beta-carotene", "provitamin a", "carotenes"],
+    "category": "colour",
+    "level": "good",
+    "reason": "Natural plant pigment and provitamin A precursor."
+  },
+  {
+    "id": "ins160c",
+    "ins": "160c",
+    "names": ["paprika oleoresin", "paprika extract", "capsanthin"],
+    "category": "colour",
+    "level": "good",
+    "reason": "Natural red-orange colour extracted from sweet red peppers."
+  },
+  {
+    "id": "ins162",
+    "ins": "162",
+    "names": ["beetroot red", "betanin"],
+    "category": "colour",
+    "level": "good",
+    "reason": "Natural red food colour extracted directly from red beets."
+  },
+  {
+    "id": "ins163",
+    "ins": "163",
+    "names": ["anthocyanins", "grape skin extract"],
+    "category": "colour",
+    "level": "good",
+    "reason": "Natural antioxidant pigments extracted from fruits and berries."
+  },
+  {
+    "id": "ins171",
+    "ins": "171",
+    "names": ["titanium dioxide"],
+    "category": "colour",
+    "level": "watch",
+    "reason": "White pigment; restricted in some jurisdictions, watch intake."
+  },
+  {
+    "id": "ins200",
+    "ins": "200",
+    "names": ["sorbic acid"],
+    "category": "preservative",
+    "level": "neutral",
+    "reason": "Common anti-mould food preservative with established safe history."
+  },
+  {
+    "id": "ins202",
+    "ins": "202",
+    "names": ["potassium sorbate"],
+    "category": "preservative",
+    "level": "neutral",
+    "reason": "Widely used anti-fungal preservative broken down naturally like fatty acids."
+  },
+  {
+    "id": "ins210",
+    "ins": "210",
+    "names": ["benzoic acid"],
+    "category": "preservative",
+    "level": "watch",
+    "reason": "Antimicrobial preservative; sensitive individuals may experience mild skin irritation."
+  },
+  {
+    "id": "ins211",
+    "ins": "211",
+    "names": ["sodium benzoate"],
+    "category": "preservative",
+    "level": "watch",
+    "reason": "Sensitive people should note; may form benzene with vitamin C."
+  },
+  {
+    "id": "ins220",
+    "ins": "220",
+    "names": ["sulphur dioxide", "sulfur dioxide"],
+    "category": "preservative",
+    "level": "limit",
+    "reason": "Allergen preservative; people with asthma and sulphite sensitivities must avoid."
+  },
+  {
+    "id": "ins221_228",
+    "ins": "221",
+    "names": ["sodium sulphite", "sodium metabisulphite", "potassium metabisulphite", "sulphites", "sulfites", "ins 223", "ins 224"],
+    "category": "preservative",
+    "level": "limit",
+    "reason": "Sulphite preservative; common allergen that asthmatics and sensitive people must limit."
+  },
+  {
+    "id": "ins250",
+    "ins": "250",
+    "names": ["sodium nitrite"],
+    "category": "preservative",
+    "level": "limit",
+    "reason": "Curing salt; limit intake especially in processed meat products."
+  },
+  {
+    "id": "ins251",
+    "ins": "251",
+    "names": ["sodium nitrate"],
+    "category": "preservative",
+    "level": "limit",
+    "reason": "Nitrate preservative; limit regular dietary intake."
+  },
+  {
+    "id": "ins260",
+    "ins": "260",
+    "names": ["acetic acid", "vinegar"],
+    "category": "preservative",
+    "level": "good",
+    "reason": "Natural organic acid found in vinegar; very safe food acid."
+  },
+  {
+    "id": "ins270",
+    "ins": "270",
+    "names": ["lactic acid"],
+    "category": "preservative",
+    "level": "good",
+    "reason": "Natural organic acid produced by beneficial fermentation; highly safe."
+  },
+  {
+    "id": "ins282",
+    "ins": "282",
+    "names": ["calcium propionate"],
+    "category": "preservative",
+    "level": "neutral",
+    "reason": "Standard bread mould inhibitor naturally metabolised by the body."
+  },
+  {
+    "id": "ins330",
+    "ins": "330",
+    "names": ["citric acid", "lemon salt"],
+    "category": "preservative",
+    "level": "good",
+    "reason": "Natural organic fruit acid; universally recognised safe acidity regulator."
+  },
+  {
+    "id": "ins300",
+    "ins": "300",
+    "names": ["ascorbic acid", "vitamin c"],
+    "category": "antioxidant",
+    "level": "good",
+    "reason": "Essential vitamin C acting as a beneficial natural antioxidant."
+  },
+  {
+    "id": "ins306",
+    "ins": "306",
+    "names": ["tocopherols", "vitamin e", "mixed tocopherols"],
+    "category": "antioxidant",
+    "level": "good",
+    "reason": "Natural vitamin E extract that protects oils from oxidation."
+  },
+  {
+    "id": "ins319",
+    "ins": "319",
+    "names": ["tbhq", "tertiary butylhydroquinone"],
+    "category": "antioxidant",
+    "level": "watch",
+    "reason": "Synthetic antioxidant for frying oils; best consumed in moderation."
+  },
+  {
+    "id": "ins320",
+    "ins": "320",
+    "names": ["bha", "butylated hydroxyanisole"],
+    "category": "antioxidant",
+    "level": "watch",
+    "reason": "Synthetic fat preservative; regulated antioxidant with recommended moderate consumption."
+  },
+  {
+    "id": "ins321",
+    "ins": "321",
+    "names": ["bht", "butylated hydroxytoluene"],
+    "category": "antioxidant",
+    "level": "watch",
+    "reason": "Synthetic antioxidant; keep overall dietary intake in moderation."
+  },
+  {
+    "id": "ins322",
+    "ins": "322",
+    "names": ["lecithin", "soya lecithin", "soy lecithin", "sunflower lecithin"],
+    "category": "emulsifier",
+    "level": "good",
+    "reason": "Naturally occurring phospholipid emulsifier derived from soy or sunflower."
+  },
+  {
+    "id": "ins331",
+    "ins": "331",
+    "names": ["sodium citrates", "trisodium citrate"],
+    "category": "stabiliser",
+    "level": "neutral",
+    "reason": "Safe salt of citric acid used to control acidity."
+  },
+  {
+    "id": "ins401",
+    "ins": "401",
+    "names": ["sodium alginate", "alginate"],
+    "category": "thickener",
+    "level": "good",
+    "reason": "Natural soluble dietary fibre extracted from brown seaweeds."
+  },
+  {
+    "id": "ins407",
+    "ins": "407",
+    "names": ["carrageenan"],
+    "category": "thickener",
+    "level": "neutral",
+    "reason": "Red seaweed extract used as gelling agent; generally well tolerated."
+  },
+  {
+    "id": "ins410",
+    "ins": "410",
+    "names": ["locust bean gum", "carob bean gum"],
+    "category": "thickener",
+    "level": "good",
+    "reason": "Natural plant seed gum rich in soluble dietary fibre."
+  },
+  {
+    "id": "ins412",
+    "ins": "412",
+    "names": ["guar gum"],
+    "category": "thickener",
+    "level": "good",
+    "reason": "Natural dietary fibre extracted from guar beans; beneficial prebiotic."
+  },
+  {
+    "id": "ins414",
+    "ins": "414",
+    "names": ["gum arabic", "acacia gum"],
+    "category": "thickener",
+    "level": "good",
+    "reason": "Natural plant exudate gum and proven prebiotic soluble fibre."
+  },
+  {
+    "id": "ins415",
+    "ins": "415",
+    "names": ["xanthan gum"],
+    "category": "thickener",
+    "level": "good",
+    "reason": "Fermented natural polysaccharide; safe plant-based binder and thickener."
+  },
+  {
+    "id": "ins440",
+    "ins": "440",
+    "names": ["pectin"],
+    "category": "thickener",
+    "level": "good",
+    "reason": "Wholesome soluble fruit fibre commonly used in jams."
+  },
+  {
+    "id": "ins460",
+    "ins": "460",
+    "names": ["cellulose", "microcrystalline cellulose"],
+    "category": "thickener",
+    "level": "neutral",
+    "reason": "Purified insoluble plant fibre passing unabsorbed through digestion."
+  },
+  {
+    "id": "ins466",
+    "ins": "466",
+    "names": ["carboxymethyl cellulose", "cmc", "sodium cmc"],
+    "category": "thickener",
+    "level": "neutral",
+    "reason": "Modified vegetable cellulose thickener used widely in sauces."
+  },
+  {
+    "id": "ins471",
+    "ins": "471",
+    "names": ["mono- and diglycerides of fatty acids", "mono and diglycerides"],
+    "category": "emulsifier",
+    "level": "neutral",
+    "reason": "Common food emulsifier made from vegetable or plant fats."
+  },
+  {
+    "id": "ins472e",
+    "ins": "472e",
+    "names": ["datem", "diacetyl tartaric acid esters of mono- and diglycerides"],
+    "category": "emulsifier",
+    "level": "neutral",
+    "reason": "Bakery dough conditioner that improves bread volume and texture."
+  },
+  {
+    "id": "ins481",
+    "ins": "481",
+    "names": ["sodium stearoyl lactylate", "ssl"],
+    "category": "emulsifier",
+    "level": "neutral",
+    "reason": "Safe bread dough conditioner made from lactic and stearic acid."
+  },
+  {
+    "id": "ins491",
+    "ins": "491",
+    "names": ["sorbitan monostearate", "sorbitan esters", "ins 492", "ins 493", "ins 494", "ins 495"],
+    "category": "emulsifier",
+    "level": "neutral",
+    "reason": "Emulsifiers widely used in yeast products and confections."
+  },
+  {
+    "id": "ins1422",
+    "ins": "1422",
+    "names": ["modified starch", "acetylated distarch adipate", "ins 1442", "hydroxypropyl distarch phosphate"],
+    "category": "thickener",
+    "level": "neutral",
+    "reason": "Treated food starch providing smooth heat-stable texture in sauces."
+  },
+  {
+    "id": "ins296",
+    "ins": "296",
+    "names": ["malic acid", "apple acid"],
+    "category": "acidity_regulator",
+    "level": "good",
+    "reason": "Naturally occurring fruit acid responsible for apple tartness."
+  },
+  {
+    "id": "ins334",
+    "ins": "334",
+    "names": ["tartaric acid"],
+    "category": "acidity_regulator",
+    "level": "neutral",
+    "reason": "Natural organic acid found in grapes and tamarind."
+  },
+  {
+    "id": "ins339",
+    "ins": "339",
+    "names": ["sodium phosphates", "monosodium phosphate", "disodium phosphate"],
+    "category": "acidity_regulator",
+    "level": "watch",
+    "reason": "Added dietary phosphate; people with chronic kidney disease should watch intake."
+  },
+  {
+    "id": "ins340",
+    "ins": "340",
+    "names": ["potassium phosphates", "dipotassium phosphate"],
+    "category": "acidity_regulator",
+    "level": "watch",
+    "reason": "Mineral salt additive; people with kidney conditions should watch potassium."
+  },
+  {
+    "id": "ins341",
+    "ins": "341",
+    "names": ["calcium phosphates", "monocalcium phosphate"],
+    "category": "raising_agent",
+    "level": "neutral",
+    "reason": "Common baking powder mineral leavening agent providing calcium."
+  },
+  {
+    "id": "ins450",
+    "ins": "450",
+    "names": ["diphosphates", "sodium acid pyrophosphate"],
+    "category": "raising_agent",
+    "level": "watch",
+    "reason": "Leavening phosphate; people with kidney conditions should monitor intake."
+  },
+  {
+    "id": "ins451",
+    "ins": "451",
+    "names": ["triphosphates", "sodium tripolyphosphate"],
+    "category": "stabiliser",
+    "level": "watch",
+    "reason": "Water-binding phosphate; individuals with kidney disease should watch intake."
+  },
+  {
+    "id": "ins452",
+    "ins": "452",
+    "names": ["polyphosphates", "sodium hexametaphosphate"],
+    "category": "stabiliser",
+    "level": "watch",
+    "reason": "Emulsifying phosphate; kidney patients should limit phosphate intake."
+  },
+  {
+    "id": "ins500",
+    "ins": "500",
+    "names": ["sodium carbonates", "sodium bicarbonate", "baking soda", "ins 500i", "ins 500ii"],
+    "category": "raising_agent",
+    "level": "neutral",
+    "reason": "Universal safe mineral baking soda used for leavening."
+  },
+  {
+    "id": "ins503",
+    "ins": "503",
+    "names": ["ammonium carbonates", "ammonium bicarbonate", "baker's ammonia", "ins 503i", "ins 503ii"],
+    "category": "raising_agent",
+    "level": "neutral",
+    "reason": "Traditional crisp-biscuit raising agent that evaporates completely upon baking."
+  },
+  {
+    "id": "ins551",
+    "ins": "551",
+    "names": ["silicon dioxide", "silica"],
+    "category": "anticaking",
+    "level": "neutral",
+    "reason": "Inert mineral powder preventing caking in powdered foods."
+  },
+  {
+    "id": "ins570",
+    "ins": "570",
+    "names": ["stearic acid"],
+    "category": "anticaking",
+    "level": "neutral",
+    "reason": "Natural saturated fatty acid found in plant and dairy fats."
+  },
+  {
+    "id": "ins621",
+    "ins": "621",
+    "names": ["monosodium glutamate", "msg", "ajinomoto"],
+    "category": "flavour_enhancer",
+    "level": "watch",
+    "reason": "Adds sodium; people with individual sensitivities report temporary discomfort."
+  },
+  {
+    "id": "ins627",
+    "ins": "627",
+    "names": ["disodium guanylate"],
+    "category": "flavour_enhancer",
+    "level": "watch",
+    "reason": "Nucleotide flavour booster; people with gout or kidney stones should limit."
+  },
+  {
+    "id": "ins631",
+    "ins": "631",
+    "names": ["disodium inosinate"],
+    "category": "flavour_enhancer",
+    "level": "watch",
+    "reason": "Purine-rich enhancer; people with gout may choose to limit."
+  },
+  {
+    "id": "ins635",
+    "ins": "635",
+    "names": ["disodium 5'-ribonucleotides", "ribonucleotides"],
+    "category": "flavour_enhancer",
+    "level": "watch",
+    "reason": "Enhancer synergy blend; sensitive individuals or gout sufferers should watch."
+  },
+  {
+    "id": "ins420",
+    "ins": "420",
+    "names": ["sorbitol", "sorbitol syrup"],
+    "category": "sweetener",
+    "level": "watch",
+    "reason": "Sugar alcohol sweetener; may cause laxative effect in excess."
+  },
+  {
+    "id": "ins421",
+    "ins": "421",
+    "names": ["mannitol"],
+    "category": "sweetener",
+    "level": "watch",
+    "reason": "Polyol sweetener; can cause digestive laxative effects in excess."
+  },
+  {
+    "id": "ins950",
+    "ins": "950",
+    "names": ["acesulfame k", "acesulfame potassium", "ace-k"],
+    "category": "sweetener",
+    "level": "watch",
+    "reason": "High-intensity artificial sweetener; best consumed in moderation."
+  },
+  {
+    "id": "ins951",
+    "ins": "951",
+    "names": ["aspartame"],
+    "category": "sweetener",
+    "level": "limit",
+    "reason": "Intense sweetener; people with phenylketonuria (PKU) must strictly avoid."
+  },
+  {
+    "id": "ins954",
+    "ins": "954",
+    "names": ["saccharin", "sodium saccharin"],
+    "category": "sweetener",
+    "level": "watch",
+    "reason": "Zero-calorie artificial sweetener; consume within daily acceptable guidelines."
+  },
+  {
+    "id": "ins955",
+    "ins": "955",
+    "names": ["sucralose", "splenda"],
+    "category": "sweetener",
+    "level": "neutral",
+    "reason": "Chlorinated zero-calorie sweetener passing largely unabsorbed through digestion."
+  },
+  {
+    "id": "ins960",
+    "ins": "960",
+    "names": ["steviol glycosides", "stevia", "stevia extract"],
+    "category": "sweetener",
+    "level": "neutral",
+    "reason": "Plant-based zero-calorie sweetener extracted from stevia leaves."
+  },
+  {
+    "id": "ins965",
+    "ins": "965",
+    "names": ["maltitol", "maltitol syrup"],
+    "category": "sweetener",
+    "level": "watch",
+    "reason": "Sugar alcohol; frequent consumption may produce gas or laxative effects."
+  },
+  {
+    "id": "ins967",
+    "ins": "967",
+    "names": ["xylitol"],
+    "category": "sweetener",
+    "level": "watch",
+    "reason": "Sugar alcohol sweetener; causes laxative effect in excess and toxic to dogs."
+  },
+  {
+    "id": "food_whole_wheat",
+    "names": ["whole wheat flour", "atta", "whole wheat"],
+    "category": "whole_food",
+    "level": "good",
+    "reason": "Wholesome whole grain flour rich in complex carbohydrates and fibre."
+  },
+  {
+    "id": "food_oats",
+    "names": ["oats", "rolled oats", "oat flour", "oatmeal"],
+    "category": "whole_food",
+    "level": "good",
+    "reason": "Heart-healthy whole grain containing cholesterol-lowering beta-glucan fibre."
+  },
+  {
+    "id": "food_millets",
+    "names": ["ragi", "finger millet", "jowar", "sorghum", "bajra", "pearl millet", "millets"],
+    "category": "whole_food",
+    "level": "good",
+    "reason": "Nutritious traditional millets rich in dietary minerals and fibre."
+  },
+  {
+    "id": "food_brown_rice",
+    "names": ["brown rice"],
+    "category": "whole_food",
+    "level": "good",
+    "reason": "Unrefined whole grain retaining its nutrient-rich bran and germ."
+  },
+  {
+    "id": "food_nuts",
+    "names": ["almonds", "almond", "cashews", "cashew", "walnuts", "walnut", "nuts"],
+    "category": "whole_food",
+    "level": "good",
+    "reason": "Nutrient-dense source of heart-healthy unsaturated fats and protein."
+  },
+  {
+    "id": "food_seeds",
+    "names": ["flax seeds", "flaxseed", "chia seeds", "sesame seeds", "sesame"],
+    "category": "whole_food",
+    "level": "good",
+    "reason": "Excellent natural source of omega-3 fats and beneficial lignans."
+  },
+  {
+    "id": "food_pulses",
+    "names": ["pulses", "dal", "chana", "bengal gram", "besan", "chickpea flour", "lentils"],
+    "category": "whole_food",
+    "level": "good",
+    "reason": "Plant-based protein staple rich in complex carbs and iron."
+  },
+  {
+    "id": "food_dairy_good",
+    "names": ["curd", "yogurt", "paneer"],
+    "category": "whole_food",
+    "level": "good",
+    "reason": "Rich natural source of complete protein and bioavailable calcium."
+  },
+  {
+    "id": "food_milk_solids",
+    "names": ["milk solids", "skimmed milk powder", "dairy solids", "dried fruit"],
+    "category": "whole_food",
+    "level": "neutral",
+    "reason": "Concentrated dairy component providing protein, minerals, and milk sugars."
+  },
+  {
+    "id": "food_spices",
+    "names": ["spices", "condiments", "turmeric", "cumin", "cardamom", "ginger", "garlic", "black pepper"],
+    "category": "whole_food",
+    "level": "good",
+    "reason": "Natural aromatic culinary ingredients with antioxidant and digestive qualities."
+  },
+  {
+    "id": "food_olive_oil",
+    "names": ["olive oil", "extra virgin olive oil"],
+    "category": "whole_food",
+    "level": "good",
+    "reason": "Cold-pressed monounsaturated oil celebrated for cardiovascular benefits."
+  },
+  {
+    "id": "food_oils_neutral",
+    "names": ["mustard oil", "groundnut oil", "peanut oil", "rice bran oil"],
+    "category": "whole_food",
+    "level": "neutral",
+    "reason": "Traditional cooking oil with balanced unsaturated fatty acid profiles."
+  },
+  {
+    "id": "food_salt",
+    "names": ["iodised salt", "edible salt", "salt"],
+    "category": "pantry",
+    "level": "neutral",
+    "reason": "Essential iodine source; people with hypertension must moderate overall intake."
+  },
+  {
+    "id": "food_proteins_neutral",
+    "names": ["whey protein", "soy protein", "pea protein"],
+    "category": "pantry",
+    "level": "neutral",
+    "reason": "Concentrated supplemental dietary protein source."
+  },
+  {
+    "id": "food_starches_neutral",
+    "names": ["maize starch", "corn starch", "rice flour", "yeast", "vinegar"],
+    "category": "pantry",
+    "level": "neutral",
+    "reason": "Standard carbohydrate food ingredients providing texture."
+  },
+  {
+    "id": "food_flavours_neutral",
+    "names": ["natural flavours", "natural flavouring", "nature-identical flavours", "nature identical flavouring substances"],
+    "category": "flavour",
+    "level": "neutral",
+    "reason": "Food flavouring substances matching molecules naturally present in foods."
+  },
+  {
+    "id": "food_cocoa",
+    "names": ["cocoa solids", "cocoa butter", "cocoa powder"],
+    "category": "whole_food",
+    "level": "neutral",
+    "reason": "Natural chocolate bean solids rich in polyphenols and stearic fat."
+  },
+  {
+    "id": "food_maida",
+    "names": ["refined wheat flour", "maida"],
+    "category": "refined_grain",
+    "level": "watch",
+    "reason": "Refined flour stripped of bran and germ; rapidly raises blood sugar."
+  },
+  {
+    "id": "food_sugar",
+    "names": ["sugar", "refined sugar", "sucrose"],
+    "category": "sugar",
+    "level": "watch",
+    "reason": "Simple table sugar; high intake linked to cavities and metabolic concerns."
+  },
+  {
+    "id": "food_jaggery",
+    "names": ["jaggery", "gur"],
+    "category": "sugar",
+    "level": "watch",
+    "reason": "Traditional cane sweetener; retains trace minerals but still concentrated sugar."
+  },
+  {
+    "id": "food_syrups_watch",
+    "names": ["invert syrup", "glucose syrup", "liquid glucose", "dextrose", "maltodextrin"],
+    "category": "sugar",
+    "level": "watch",
+    "reason": "Refined liquid sugars with high glycaemic index."
+  },
+  {
+    "id": "food_palm_oil",
+    "names": ["palm oil", "palmolein", "refined palm oil", "edible vegetable oil (palmolein)"],
+    "category": "fat",
+    "level": "watch",
+    "reason": "Refined tropical oil containing high proportion of saturated fats."
+  },
+  {
+    "id": "food_unspecified_oil",
+    "names": ["edible vegetable oil", "vegetable fat"],
+    "category": "fat",
+    "level": "watch",
+    "reason": "Generic vegetable oil where specific source and fatty profile are unspecified."
+  },
+  {
+    "id": "food_artificial_flavours",
+    "names": ["artificial flavours", "artificial flavouring substances"],
+    "category": "flavour",
+    "level": "watch",
+    "reason": "Synthetic chemical aromatic compounds replicating culinary aromas."
+  },
+  {
+    "id": "food_yeast_extract",
+    "names": ["yeast extract", "hydrolysed vegetable protein", "hvp"],
+    "category": "flavour",
+    "level": "watch",
+    "reason": "Savoury umami seasoning naturally high in free glutamates and sodium."
+  },
+  {
+    "id": "food_hydrogenated_fat",
+    "names": ["hydrogenated vegetable fat", "vanaspati", "partially hydrogenated oil", "partially hydrogenated vegetable oil"],
+    "category": "fat",
+    "level": "limit",
+    "reason": "Contains unhealthy industrial trans fats that raise harmful LDL cholesterol."
+  },
+  {
+    "id": "food_hfcs",
+    "names": ["high fructose corn syrup", "hfcs", "fructose syrup"],
+    "category": "sugar",
+    "level": "limit",
+    "reason": "Industrial high-fructose syrup associated with metabolic fatty liver changes."
+  }
+]

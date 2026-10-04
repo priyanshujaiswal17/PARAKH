@@ -13,6 +13,19 @@ from typing import Any, Generator
 from PIL import Image
 import gradio as gr
 
+# Strict CSP Workaround for Cloud Hosts (e.g. Embarko edge proxy)
+# Gradio 5/6 evaluates gr.HTML using client-side Handlebars Function(...) which violates
+# strict script-src CSP rules without 'unsafe-eval'.
+# Using gr.Markdown(sanitize_html=False) renders identical full HTML safely.
+_orig_html = gr.HTML
+
+def _safe_html_component(*args, **kwargs):
+    kwargs.pop("show_label", None)
+    kwargs["sanitize_html"] = False
+    return gr.Markdown(*args, **kwargs)
+
+gr.HTML = _safe_html_component
+
 if sys.platform == "win32":
     try:
         if hasattr(sys.stdout, "reconfigure"):
@@ -61,6 +74,10 @@ CUSTOM_CSS = """
 *, *::before, *::after { box-sizing: border-box; }
 
 footer, .built-with { display: none !important; }
+
+/* Transparent prose container for safe HTML rendering */
+.prose, .prose.gradio-style { max-width: none !important; }
+.gradio-container .prose p:empty { display: none !important; }
 
 /* ═══ GRADIO BLOCK OVERRIDES (ELIMINATE DARK MODE LEAKS) ═══ */
 .gradio-container .block,
